@@ -17,12 +17,19 @@ export default class Random extends Component {
       };
 
   misBirras() {
+    axios.get("http://localhost:5000/random" ).then(res => {
+      xd = res.data.name;
+      xz = res.data.image_url;
+    });
   }
-  
+  componentDidMount(){
+    
+    this.misBirras()
+  }
   
 
       render() {
-          Nueva()
+          
         //   let miPais = this.state.movies.filter(patata => {
         //     return patata.name.common === this.props.match.params.id;
         //   });

@@ -25,8 +25,12 @@ export default class About extends Component {
       });
     });
   }
-  render() {
+
+
+  componentDidMount(){
     this.misBirras();
+  }
+  render() {
     return (
       <div>
         <ul>
