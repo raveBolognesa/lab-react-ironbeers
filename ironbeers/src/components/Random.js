@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
 var xd, xz;
-function Nueva(){
 
-    axios.get("http://localhost:5000/random" ).then(res => {
-      xd = res.data.name;
-      xz = res.data.image_url;
-    });
-}
 export default class Random extends Component {
     constructor(props) {
         super(props);
